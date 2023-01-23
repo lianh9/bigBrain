@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link href = "{{url_for('static',filename='css/form_style.css')}}" rel="stylesheet">
+<br/>
+<br/>
+<div class="mydiv">
+<div class="container center">
+
+<h3><strong> To Do List</strong> </h3>
+</br></br>
+        {% if orderList %}
+	<ol>
+		{% for doList in orderList %}
+		<li><b> {{doList.goal}}</b> <blockquote> due at {{doList.due_date}} </li>
+		{% endfor %}
+	</ol>
+	{% endif %}
+
+<form action = "" method = "POST" novalidate>
+	{{ form.hidden_tag() }}
+	<p>
+		{{form.goal.label}}
+		{{form.goal(size=50)}}
+	</p></br>
+	<p>
+		{{form.prio.label}}
+		{{form.prio(size=50)}}
+
+	</p></br>
+	<p> {{form.due_date.label}}
+		{{form.due_date(size=32)}}
+	</p></br>
+	<p>
+		{{form.addG()}}	 </p>
+</form>
+</div>
+{% endblock %}
+

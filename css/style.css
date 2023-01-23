@@ -1,0 +1,63 @@
+h3{
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size:25px;
+    margin-left:40px;
+    text-align : left;
+    color: gray;
+}
+input[type=text] {
+    border: none;
+    outline:none;
+    border-bottom: 2px solid gray;
+    }
+
+h1{
+    font-family: Copperplate, Papyrus, fantasy;
+    margin-left: 25px;
+    
+}
+
+img{
+    margin-left:30px;
+}
+
+h4{
+    position:absolute;
+    right:5px;
+    margin-top: 120px;
+    margin-left:640px;
+    font-size:25px;
+    font:bold;
+    animation-name: for_h4;
+    animation-duration: 4s;  
+    animation-fill-mode: forwards;
+    
+}
+@keyframes for_h4 {
+    from {top: 0px;}
+    to {top: 140px;}
+  }
+h5{
+    position:absolute;
+    
+    margin-top: 190px;
+    margin-left:639px;
+    font-size:20px;
+    color:rgba(0, 0, 0, 0.513);
+    animation-name: for_h5;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.mydiv {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes for_h5 {
+    from {top: 0px;}
+    to {top: 190px;}
+  }

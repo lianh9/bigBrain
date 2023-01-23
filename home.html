@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link href = "{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+    <body>
+        
+        <br/>
+        
+<h1> <strong>JOURNEY </strong></h1>
+<h3>Starts from taking notes</h3>
+
+<h4>Remember where you are going, and we will help you get there.</h4>
+<br/>
+<h5>Note down whatever you need, whenever you want.</h5>
+<br/>
+<img src = "{{url_for('static',filename='images/brain.png')}}" width=500>
+   
+</body> 
+{% endblock %}

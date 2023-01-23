@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %} 
+<link href = "{{url_for('static',filename='css/form_style.css')}}" rel="stylesheet">
+<br/> 
+<div class="container">
+</br>
+    <h4> Share Flashcard</h4>
+</br>
+
+<div class = 'shadow p-3 mb-5 bg-body rounded'>
+<form action="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.share_user_name.label }} <br>
+        {{ form.share_user_name(size=20) }}
+    </p></br>
+    <p>
+        {{ form.card_id.label }} <br>
+        {{ form.card_id(size=20) }}
+    </p></br>
+    
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+{{ckeditor.load()}}
+{{ckeditor.config(name = 'text')}}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<link href = "{{url_for('static',filename='css/form_style.css')}}" rel="stylesheet">
+<br/>
+<br/>
+<div class="mydiv">
+<div class="container center">
+<h3> <strong>Sign in</strong></h3>
+<br/>
+<form action="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username.label }} <br>
+        {{ form.username(size=70) }}
+    </p>
+    <p><br/>
+        {{ form.email.label }} <br>
+        {{ form.email(size=70) }}
+    </p>
+    <p><br/>
+        {{ form.password_hash.label }} <br>
+        {{ form.password_hash(size=70) }}
+    </p>
+    <p>
+        {{ form.remember.label }} <br>
+        {{ form.remember() }}
+    </p>
+    <p>
+        {{ form.submit() }}
+    </p>
+</form>
+<a href ='/register'>new user? click here to sign up an account</a>
+</div>
+
+<form method = 'POST' action = '/login'>
+{% endblock %}

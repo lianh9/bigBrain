@@ -1,0 +1,9 @@
+h2{
+    position: absolute;  
+    margin-left: 960px;
+}
+button {
+    margin-top: 6px;
+    margin-left: 950px;
+    background-color: rgb(0, 153, 255);
+}
